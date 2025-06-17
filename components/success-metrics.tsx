@@ -158,13 +158,13 @@ export function SuccessMetrics({ data }: SuccessMetricsProps) {
         </Card>
 
         <Card>
-          <CardContent className="pt-6">
+          {/* <CardContent className="pt-6">
             <div className="flex items-center gap-2">
               {lowPgSuccessCount > 0 && <AlertTriangle className="h-4 w-4 text-red-500" />}
               <div className="text-2xl font-bold text-red-600">{lowPgSuccessCount}</div>
             </div>
             <p className="text-xs text-muted-foreground">Minutes Below 50% PG Success</p>
-          </CardContent>
+          </CardContent> */}
         </Card>
       </div>
 
