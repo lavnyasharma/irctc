@@ -22,6 +22,7 @@ export function SuccessMetrics({ data }: SuccessMetricsProps) {
   const lowPgSuccessCount = data.filter((row) => row.pgSuccessRate < 50).length
   const criticalMinutes = data.filter((row) => row.pgSuccessRate < 30)
 
+
   useEffect(() => {
     if (!chartRef.current) return
 
@@ -167,7 +168,7 @@ export function SuccessMetrics({ data }: SuccessMetricsProps) {
         </Card>
       </div>
 
-      {criticalMinutes.length > 0 && (
+      {/* {criticalMinutes.length > 0 && (
         <Card className="border-red-200 bg-red-50">
           <CardHeader>
             <CardTitle className="text-red-800 flex items-center gap-2">
@@ -180,7 +181,7 @@ export function SuccessMetrics({ data }: SuccessMetricsProps) {
             <div className="flex flex-wrap gap-2">
               {criticalMinutes.slice(0, 10).map((minute) => (
                 <span key={minute.minute} className="px-2 py-1 bg-red-200 text-red-800 rounded text-sm">
-                  {minute.minute} ({minute.pgSuccessRate.toFixed(1)}%)
+                  {minute.minute} ({minute.pgSuccessRate}%)
                 </span>
               ))}
               {criticalMinutes.length > 10 && (
@@ -191,7 +192,7 @@ export function SuccessMetrics({ data }: SuccessMetricsProps) {
             </div>
           </CardContent>
         </Card>
-      )}
+      )} */}
     </div>
   )
 }
